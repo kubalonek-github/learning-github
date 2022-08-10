@@ -10,7 +10,7 @@ public class Main {
 
         //FOOD
         food.add("Void space for new ArrayList element!");
-        food.add("Pizza"); //Pierwszy element listy
+        food.add("Pizza");
         food.add("Hamburger");
         food.add("HotDog");
         food.add("Spaghetti");
