@@ -1,3 +1,5 @@
+#BELONG TO config.txt
+
 with open("config.txt") as file:
     argument1 = file.readline().strip()
     argument2 = file.readline().strip()
