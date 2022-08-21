@@ -1,0 +1,2 @@
+bird_is_flying = False
+dog_walking = True

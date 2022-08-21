@@ -1,14 +1,14 @@
-file = open("countries_and_capitals.txt", "w+")
+with open("config.txt") as file:
+    argument1 = file.readline().strip()
+    argument2 = file.readline().strip()
+    arg1 = argument1[-5:22].strip()
+    arg2 = argument2[-5:19].strip()
+if arg1=="True":
+    print("Ptak lata!")
+else:
+    print("Ptak nie lata")
 
-countries_and_captials = {"Poland": "Warsaw","Germany": "Berlin","US": "London"}
-
-for country, capital in countries_and_captials.items():
-    file.write(country + "-" + capital + "\n")
-file.close()
-
-###
-
-file = open("countries_and_capitals.txt")
-for line in file.readlines(): #line = lineNumber
-    print(line.strip())
-file.close()
+if arg2=="True":
+    print("Pies chodzi")
+else:
+    print("Pies nie chodzi")

@@ -1,5 +1,21 @@
+from KlasyProjektu import Main
+from KlasyProjektu import Words
 import math
 import random
+
+word = Words()
+
+key1,key2,key3,key4,key5,key6,key7 = word.smain1,word.smain2,word.smain3,word.smain4,word.smain5,word.smain6,word.smain7
+
+menu_number1 = int(word.smain1[0])
+menu_number2 = int(word.smain2[0])
+menu_number3 = int(word.smain3[0])
+menu_number4 = int(word.smain4[0])
+menu_number5 = int(word.smain5[0])
+menu_number6 = int(word.smain6[0])
+menu_number7 = int(word.smain7[0])
+
+user_menu_choices = Main(key1,key2,key3,key4,key5,key6,key7)
 
 work_tab = []
 user_choice = -1
@@ -19,6 +35,8 @@ def add_to_tab():
     print("Wpisz zadanie ktore ma sie pojawic w tablicy: ")
     work_input = str(input(""))
     work_tab.append(work_input)
+    file = open("work_notes.txt", "a+")
+    file.write(work_input + "\n")
 
 def del_from_tab():
     print("Wybierz index zadania do usuniecia: ")
@@ -55,31 +73,32 @@ def random_work():
     print("Losowa rzecz z listy: "+rand)
     print("*"*30)
 
-while user_choice!=7:
+while user_choice!=menu_number7:
     print("")
-    print("1. Zobacz tablice zadan")
-    print("2. Dodaj zadanie do tablicy")
-    print("3. Usun zadanie z tablicy")
-    print("4. Dodaj zadanie do pliku")
-    print("5. Synchronizuj")
-    print("6. Losowe zadanie z listy")
-    print("7. Zakończ program")
+    print(user_menu_choices.key1)
+    print(user_menu_choices.key2)
+    print(user_menu_choices.key3)
+    print(user_menu_choices.key4)
+    print(user_menu_choices.key5)
+    print(user_menu_choices.key6)
+    print(user_menu_choices.key7)
     user_choice = int(input(""))
-    if user_choice == 1:
+
+    if user_choice == menu_number1:
         watch_tab()
 
-    elif user_choice == 2:
+    elif user_choice == menu_number2:
         add_to_tab()
 
-    elif user_choice == 3:
+    elif user_choice == menu_number3:
         del_from_tab()
 
-    elif user_choice == 4:
+    elif user_choice == menu_number4:
         save_tab_to_file()
 
-    elif user_choice == 5:
+    elif user_choice == menu_number5:
         sync_data()
 
-    elif user_choice == 6:
+    elif user_choice == menu_number6:
         random_work()
 

@@ -1,3 +1,9 @@
 Poland-Warsaw
 Germany-Berlin
 US-London
+Poland-Warsaw
+Germany-Berlin
+US-London
+Poland-Warsaw
+Germany-Berlin
+US-London
